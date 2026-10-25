@@ -222,7 +222,7 @@ State: position, velocity, attitude quaternion, body rates and the 4 motor thrus
 The flight controller is not told the wind. Like a real autopilot it estimates it from the gap between ground and air
 velocity (3 s time constant), so gusts, takeoff and turns push the drone off its path, while steady wind mainly costs
 airspeed, power and tilt. The 3D aircraft leans by the angle that balances acceleration and air drag
-(14.4° in an 8 m/s crosswind, against 13.9° from the 6-DOF model).
+(14.4° in an 8 m/s crosswind, against 13.9° from the 6-DOF model)
 
 ### What feeds the simulator, and how honest each piece is
 
