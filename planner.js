@@ -66,6 +66,7 @@ panel.innerHTML = `
   <button class="btn" id="pl-overlay" aria-pressed="true">Paths on map: on</button>
   <button class="btn primary" id="pl-fly">Fly this in the simulator</button></div>
  <div class="verdict"><div class="vd" id="pl-verdict"></div><div class="cards" id="pl-cards" style="border-top:0"></div></div>
+  <div id="gemma-verdict" style="padding:12px 20px;font-weight:600;border-top:1px solid var(--line)">Pick a launch hour to see Gemma's verdict.</div> 
  <div class="lg"><span><i style="background:#199e70"></i>No wind (original path)</span><span><i style="background:#d95926"></i>Recommended path (<span id="pl-sugl">best hour</span>)</span><span><i style="background:#3987e5"></i>Selected path / live simulator path</span></div>
 </div>`;
 const firstSection = document.querySelector('.layout .col section');
@@ -223,6 +224,22 @@ function renderAll() {
   const sl = document.getElementById('pl-sugl'); if (sl) sl.textContent = R.best && R.best.status !== 'NO-GO' ? R.best.valid_local + ', median scenario' : 'none: no hour is cleared';
   renderChart(); renderDetail();
   (window.DronePlanner.listeners || []).forEach(fn => { try { fn() } catch (e) { console.error(e) } });
+    if (window.showGemmaVerdict) {
+    const gh = R.hours[P.hour], gr = selRun();
+    showGemmaVerdict({
+      status: LBL[gh.status],                      // CLEARED / CONDITIONAL / NOT CLEARED
+      launch_time: gh.valid_local,
+      reasons: gh.reasons.slice(0, 5),
+      scenarios_in_hour: gh.runs.length,
+      battery_needed_percent: gr.need === null ? 'survey cannot finish' : Math.round(gr.need),
+      flight_time_min: +(gr.r.dur / 60).toFixed(1),
+      wind_at_altitude_ms: +gr.w.wind_flight_level_ms.toFixed(1),
+      gust_sigma_ms: +gr.w.gust_sigma_ms.toFixed(1),
+      temperature_c: Math.round(gr.w.temperature_c),
+      rain_mm_h: +gr.w.rain_mm_h.toFixed(1),
+      recommended_launch: R.best.status !== 'NO-GO' ? R.best.valid_local : 'none'
+    });
+  }
 }
 function renderChart() {
   const R = P.result, H = R.hours, B = big(), u = v => v === null ? null : B ? v / 100 : v;
