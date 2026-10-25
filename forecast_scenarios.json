@@ -1,0 +1,806 @@
+{
+  "schema": "drone-scout-forecast-v1",
+  "generated_utc": "2026-10-25T18:10Z",
+  "field": {
+    "name": "Survey field",
+    "lat": 29.6436,
+    "lon": -82.3549,
+    "map_heading_deg": 0.0,
+    "flight_altitude_m": 30.0,
+    "timezone": "America/New_York"
+  },
+  "source": {
+    "model": "MOCK synthetic weather (demo only)",
+    "kind": "synthetic",
+    "members": 4,
+    "grid_cell_km_from_field": 0.0
+  },
+  "init_utc": "2026-10-25T18:00Z",
+  "planned_launch_local": "Tue 27 Oct 09:00",
+  "assumptions": {
+    "flight_level_wind": {
+      "tag": "ASSUMED",
+      "value": 0.14,
+      "note": "U(alt) = U10 * (alt/10)^alpha, open farmland"
+    },
+    "gust_sigma": {
+      "tag": "ASSUMED",
+      "value": 0.15,
+      "note": "sqrt((TI*U)^2 + ensemble spread^2); GFS: also (gust - mean)/2"
+    },
+    "rain": {
+      "tag": "DERIVED",
+      "note": "radar reflectivity via Marshall-Palmer Z = 200 R^1.6"
+    },
+    "air_density": {
+      "tag": "DERIVED",
+      "note": "ideal gas with humidity; feeds hover power"
+    },
+    "dust_risk": {
+      "tag": "DERIVED",
+      "note": "heuristic from 10 m wind, humidity, rain; no dust model"
+    },
+    "visibility": {
+      "tag": "ASSUMED",
+      "note": "dust + rain extinction; FAA Part 107 needs >= 3 statute miles (4.83 km)"
+    }
+  },
+  "hours": [
+    {
+      "valid_utc": "2026-10-27T13:00Z",
+      "valid_local": "Tue 27 Oct 09:00",
+      "lead_h": 43,
+      "ensemble_spread_ms": 0.92,
+      "members": [
+        {
+          "wind_10m_ms": 3.98,
+          "wind_flight_level_ms": 4.64,
+          "wind_from_true_deg": 191.8,
+          "wind_from_map_deg": 191.8,
+          "gust_sigma_ms": 1.15,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.5,
+          "relative_humidity_pct": 20.0,
+          "pressure_pa": 101300.0,
+          "air_density_kgm3": 1.1665,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 4.5,
+            "wdir": 190,
+            "gust": 1.2
+          }
+        },
+        {
+          "wind_10m_ms": 2.85,
+          "wind_flight_level_ms": 3.32,
+          "wind_from_true_deg": 201.2,
+          "wind_from_map_deg": 201.2,
+          "gust_sigma_ms": 1.05,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.0,
+          "relative_humidity_pct": 22.0,
+          "pressure_pa": 101278.0,
+          "air_density_kgm3": 1.1637,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 3.5,
+            "wdir": 200,
+            "gust": 1.0
+          }
+        },
+        {
+          "wind_10m_ms": 3.86,
+          "wind_flight_level_ms": 4.5,
+          "wind_from_true_deg": 201.8,
+          "wind_from_map_deg": 201.8,
+          "gust_sigma_ms": 1.14,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.0,
+          "relative_humidity_pct": 29.0,
+          "pressure_pa": 101297.0,
+          "air_density_kgm3": 1.1629,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 4.5,
+            "wdir": 200,
+            "gust": 1.1
+          }
+        },
+        {
+          "wind_10m_ms": 5.08,
+          "wind_flight_level_ms": 5.92,
+          "wind_from_true_deg": 217.2,
+          "wind_from_map_deg": 217.2,
+          "gust_sigma_ms": 1.28,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.2,
+          "relative_humidity_pct": 30.0,
+          "pressure_pa": 101231.0,
+          "air_density_kgm3": 1.161,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 6.0,
+            "wdir": 215,
+            "gust": 1.3
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T14:00Z",
+      "valid_local": "Tue 27 Oct 10:00",
+      "lead_h": 44,
+      "ensemble_spread_ms": 1.62,
+      "members": [
+        {
+          "wind_10m_ms": 4.13,
+          "wind_flight_level_ms": 4.82,
+          "wind_from_true_deg": 218.2,
+          "wind_from_map_deg": 218.2,
+          "gust_sigma_ms": 1.77,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.3,
+          "relative_humidity_pct": 25.0,
+          "pressure_pa": 101259.0,
+          "air_density_kgm3": 1.1618,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 5.0,
+            "wdir": 220,
+            "gust": 1.8
+          }
+        },
+        {
+          "wind_10m_ms": 4.05,
+          "wind_flight_level_ms": 4.72,
+          "wind_from_true_deg": 199.9,
+          "wind_from_map_deg": 199.9,
+          "gust_sigma_ms": 1.77,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.6,
+          "relative_humidity_pct": 23.0,
+          "pressure_pa": 101245.0,
+          "air_density_kgm3": 1.1608,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 4.5,
+            "wdir": 200,
+            "gust": 1.8
+          }
+        },
+        {
+          "wind_10m_ms": 4.57,
+          "wind_flight_level_ms": 5.33,
+          "wind_from_true_deg": 217.4,
+          "wind_from_map_deg": 217.4,
+          "gust_sigma_ms": 1.8,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.3,
+          "relative_humidity_pct": 24.0,
+          "pressure_pa": 101248.0,
+          "air_density_kgm3": 1.1621,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 5.5,
+            "wdir": 215,
+            "gust": 1.8
+          }
+        },
+        {
+          "wind_10m_ms": 7.42,
+          "wind_flight_level_ms": 8.65,
+          "wind_from_true_deg": 248.4,
+          "wind_from_map_deg": 248.4,
+          "gust_sigma_ms": 2.07,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.3,
+          "relative_humidity_pct": 28.0,
+          "pressure_pa": 101071.0,
+          "air_density_kgm3": 1.1593,
+          "dust_risk_0_1": 0.35,
+          "visibility_km": 9.78,
+          "sim": {
+            "wind": 8.5,
+            "wdir": 250,
+            "gust": 2.1
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T15:00Z",
+      "valid_local": "Tue 27 Oct 11:00",
+      "lead_h": 45,
+      "ensemble_spread_ms": 2.15,
+      "members": [
+        {
+          "wind_10m_ms": 6.8,
+          "wind_flight_level_ms": 7.94,
+          "wind_from_true_deg": 226.6,
+          "wind_from_map_deg": 226.6,
+          "gust_sigma_ms": 2.46,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.4,
+          "relative_humidity_pct": 23.0,
+          "pressure_pa": 101187.0,
+          "air_density_kgm3": 1.1652,
+          "dust_risk_0_1": 0.2,
+          "visibility_km": 19.84,
+          "sim": {
+            "wind": 8.0,
+            "wdir": 225,
+            "gust": 2.5
+          }
+        },
+        {
+          "wind_10m_ms": 4.62,
+          "wind_flight_level_ms": 5.39,
+          "wind_from_true_deg": 203.7,
+          "wind_from_map_deg": 203.7,
+          "gust_sigma_ms": 2.3,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.9,
+          "relative_humidity_pct": 30.0,
+          "pressure_pa": 101239.0,
+          "air_density_kgm3": 1.1622,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 5.5,
+            "wdir": 205,
+            "gust": 2.3
+          }
+        },
+        {
+          "wind_10m_ms": 6.7,
+          "wind_flight_level_ms": 7.82,
+          "wind_from_true_deg": 256.1,
+          "wind_from_map_deg": 256.1,
+          "gust_sigma_ms": 2.45,
+          "rain_mm_h": 0.0,
+          "temperature_c": 29.0,
+          "relative_humidity_pct": 28.0,
+          "pressure_pa": 101047.0,
+          "air_density_kgm3": 1.16,
+          "dust_risk_0_1": 0.18,
+          "visibility_km": 22.28,
+          "sim": {
+            "wind": 8.0,
+            "wdir": 255,
+            "gust": 2.4
+          }
+        },
+        {
+          "wind_10m_ms": 9.8,
+          "wind_flight_level_ms": 11.42,
+          "wind_from_true_deg": 266.1,
+          "wind_from_map_deg": 266.1,
+          "gust_sigma_ms": 2.75,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.8,
+          "relative_humidity_pct": 29.0,
+          "pressure_pa": 100804.0,
+          "air_density_kgm3": 1.1582,
+          "dust_risk_0_1": 0.95,
+          "visibility_km": 0.64,
+          "sim": {
+            "wind": 11.5,
+            "wdir": 265,
+            "gust": 2.7
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T16:00Z",
+      "valid_local": "Tue 27 Oct 12:00",
+      "lead_h": 46,
+      "ensemble_spread_ms": 1.18,
+      "members": [
+        {
+          "wind_10m_ms": 8.54,
+          "wind_flight_level_ms": 9.96,
+          "wind_from_true_deg": 258.6,
+          "wind_from_map_deg": 258.6,
+          "gust_sigma_ms": 1.9,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.2,
+          "relative_humidity_pct": 27.0,
+          "pressure_pa": 100884.0,
+          "air_density_kgm3": 1.1615,
+          "dust_risk_0_1": 0.63,
+          "visibility_km": 2.7,
+          "sim": {
+            "wind": 10.0,
+            "wdir": 260,
+            "gust": 1.9
+          }
+        },
+        {
+          "wind_10m_ms": 7.08,
+          "wind_flight_level_ms": 8.26,
+          "wind_from_true_deg": 241.5,
+          "wind_from_map_deg": 241.5,
+          "gust_sigma_ms": 1.71,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.5,
+          "relative_humidity_pct": 27.0,
+          "pressure_pa": 101016.0,
+          "air_density_kgm3": 1.1621,
+          "dust_risk_0_1": 0.27,
+          "visibility_km": 14.4,
+          "sim": {
+            "wind": 8.5,
+            "wdir": 240,
+            "gust": 1.7
+          }
+        },
+        {
+          "wind_10m_ms": 9.0,
+          "wind_flight_level_ms": 10.5,
+          "wind_from_true_deg": 278.3,
+          "wind_from_map_deg": 278.3,
+          "gust_sigma_ms": 1.97,
+          "rain_mm_h": 0.0,
+          "temperature_c": 27.9,
+          "relative_humidity_pct": 32.0,
+          "pressure_pa": 100849.0,
+          "air_density_kgm3": 1.1619,
+          "dust_risk_0_1": 0.75,
+          "visibility_km": 1.59,
+          "sim": {
+            "wind": 10.5,
+            "wdir": 280,
+            "gust": 2.0
+          }
+        },
+        {
+          "wind_10m_ms": 9.88,
+          "wind_flight_level_ms": 11.52,
+          "wind_from_true_deg": 287.0,
+          "wind_from_map_deg": 287.0,
+          "gust_sigma_ms": 2.09,
+          "rain_mm_h": 0.0,
+          "temperature_c": 27.6,
+          "relative_humidity_pct": 40.0,
+          "pressure_pa": 100718.0,
+          "air_density_kgm3": 1.1602,
+          "dust_risk_0_1": 0.97,
+          "visibility_km": 0.58,
+          "sim": {
+            "wind": 11.5,
+            "wdir": 285,
+            "gust": 2.1
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T17:00Z",
+      "valid_local": "Tue 27 Oct 13:00",
+      "lead_h": 47,
+      "ensemble_spread_ms": 0.96,
+      "members": [
+        {
+          "wind_10m_ms": 9.5,
+          "wind_flight_level_ms": 11.08,
+          "wind_from_true_deg": 286.3,
+          "wind_from_map_deg": 286.3,
+          "gust_sigma_ms": 1.92,
+          "rain_mm_h": 0.0,
+          "temperature_c": 27.3,
+          "relative_humidity_pct": 34.0,
+          "pressure_pa": 100718.0,
+          "air_density_kgm3": 1.1623,
+          "dust_risk_0_1": 0.88,
+          "visibility_km": 0.89,
+          "sim": {
+            "wind": 11.0,
+            "wdir": 285,
+            "gust": 1.9
+          }
+        },
+        {
+          "wind_10m_ms": 10.49,
+          "wind_flight_level_ms": 12.24,
+          "wind_from_true_deg": 285.4,
+          "wind_from_map_deg": 285.4,
+          "gust_sigma_ms": 2.07,
+          "rain_mm_h": 0.0,
+          "temperature_c": 28.0,
+          "relative_humidity_pct": 30.0,
+          "pressure_pa": 100750.0,
+          "air_density_kgm3": 1.1605,
+          "dust_risk_0_1": 1.0,
+          "visibility_km": 0.5,
+          "sim": {
+            "wind": 12,
+            "wdir": 285,
+            "gust": 2.1
+          }
+        },
+        {
+          "wind_10m_ms": 10.18,
+          "wind_flight_level_ms": 11.88,
+          "wind_from_true_deg": 290.6,
+          "wind_from_map_deg": 290.6,
+          "gust_sigma_ms": 2.03,
+          "rain_mm_h": 0.0,
+          "temperature_c": 27.4,
+          "relative_humidity_pct": 42.0,
+          "pressure_pa": 100701.0,
+          "air_density_kgm3": 1.1605,
+          "dust_risk_0_1": 0.95,
+          "visibility_km": 0.64,
+          "sim": {
+            "wind": 12,
+            "wdir": 290,
+            "gust": 2.0
+          }
+        },
+        {
+          "wind_10m_ms": 8.34,
+          "wind_flight_level_ms": 9.72,
+          "wind_from_true_deg": 262.8,
+          "wind_from_map_deg": 262.8,
+          "gust_sigma_ms": 1.75,
+          "rain_mm_h": 0.35,
+          "temperature_c": 25.4,
+          "relative_humidity_pct": 58.0,
+          "pressure_pa": 100799.0,
+          "air_density_kgm3": 1.168,
+          "dust_risk_0_1": 0.32,
+          "visibility_km": 7.79,
+          "sim": {
+            "wind": 9.5,
+            "wdir": 265,
+            "gust": 1.7
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T18:00Z",
+      "valid_local": "Tue 27 Oct 14:00",
+      "lead_h": 48,
+      "ensemble_spread_ms": 1.37,
+      "members": [
+        {
+          "wind_10m_ms": 9.67,
+          "wind_flight_level_ms": 11.28,
+          "wind_from_true_deg": 283.5,
+          "wind_from_map_deg": 283.5,
+          "gust_sigma_ms": 2.18,
+          "rain_mm_h": 0.32,
+          "temperature_c": 24.8,
+          "relative_humidity_pct": 47.0,
+          "pressure_pa": 100760.0,
+          "air_density_kgm3": 1.1715,
+          "dust_risk_0_1": 0.76,
+          "visibility_km": 1.42,
+          "sim": {
+            "wind": 11.5,
+            "wdir": 285,
+            "gust": 2.2
+          }
+        },
+        {
+          "wind_10m_ms": 9.68,
+          "wind_flight_level_ms": 11.3,
+          "wind_from_true_deg": 285.6,
+          "wind_from_map_deg": 285.6,
+          "gust_sigma_ms": 2.18,
+          "rain_mm_h": 0.0,
+          "temperature_c": 26.0,
+          "relative_humidity_pct": 45.0,
+          "pressure_pa": 100692.0,
+          "air_density_kgm3": 1.1661,
+          "dust_risk_0_1": 0.8,
+          "visibility_km": 1.23,
+          "sim": {
+            "wind": 11.5,
+            "wdir": 285,
+            "gust": 2.2
+          }
+        },
+        {
+          "wind_10m_ms": 8.12,
+          "wind_flight_level_ms": 9.47,
+          "wind_from_true_deg": 254.8,
+          "wind_from_map_deg": 254.8,
+          "gust_sigma_ms": 1.98,
+          "rain_mm_h": 1.08,
+          "temperature_c": 24.2,
+          "relative_humidity_pct": 62.0,
+          "pressure_pa": 100819.0,
+          "air_density_kgm3": 1.1727,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 9.29,
+          "sim": {
+            "wind": 9.5,
+            "wdir": 255,
+            "gust": 2.0
+          }
+        },
+        {
+          "wind_10m_ms": 6.87,
+          "wind_flight_level_ms": 8.01,
+          "wind_from_true_deg": 264.5,
+          "wind_from_map_deg": 264.5,
+          "gust_sigma_ms": 1.83,
+          "rain_mm_h": 11.08,
+          "temperature_c": 22.2,
+          "relative_humidity_pct": 75.0,
+          "pressure_pa": 101064.0,
+          "air_density_kgm3": 1.1833,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 2.39,
+          "sim": {
+            "wind": 8.0,
+            "wdir": 265,
+            "gust": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T19:00Z",
+      "valid_local": "Tue 27 Oct 15:00",
+      "lead_h": 49,
+      "ensemble_spread_ms": 1.86,
+      "members": [
+        {
+          "wind_10m_ms": 7.35,
+          "wind_flight_level_ms": 8.57,
+          "wind_from_true_deg": 259.1,
+          "wind_from_map_deg": 259.1,
+          "gust_sigma_ms": 2.26,
+          "rain_mm_h": 2.27,
+          "temperature_c": 22.4,
+          "relative_humidity_pct": 69.0,
+          "pressure_pa": 100982.0,
+          "air_density_kgm3": 1.1821,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 6.18,
+          "sim": {
+            "wind": 8.5,
+            "wdir": 260,
+            "gust": 2.3
+          }
+        },
+        {
+          "wind_10m_ms": 7.9,
+          "wind_flight_level_ms": 9.22,
+          "wind_from_true_deg": 264.7,
+          "wind_from_map_deg": 264.7,
+          "gust_sigma_ms": 2.32,
+          "rain_mm_h": 0.63,
+          "temperature_c": 22.9,
+          "relative_humidity_pct": 69.0,
+          "pressure_pa": 100881.0,
+          "air_density_kgm3": 1.1783,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 12.23,
+          "sim": {
+            "wind": 9.0,
+            "wdir": 265,
+            "gust": 2.3
+          }
+        },
+        {
+          "wind_10m_ms": 5.62,
+          "wind_flight_level_ms": 6.55,
+          "wind_from_true_deg": 240.5,
+          "wind_from_map_deg": 240.5,
+          "gust_sigma_ms": 2.11,
+          "rain_mm_h": 6.71,
+          "temperature_c": 20.5,
+          "relative_humidity_pct": 76.0,
+          "pressure_pa": 101073.0,
+          "air_density_kgm3": 1.1907,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 3.25,
+          "sim": {
+            "wind": 6.5,
+            "wdir": 240,
+            "gust": 2.1
+          }
+        },
+        {
+          "wind_10m_ms": 3.82,
+          "wind_flight_level_ms": 4.46,
+          "wind_from_true_deg": 211.5,
+          "wind_from_map_deg": 211.5,
+          "gust_sigma_ms": 1.98,
+          "rain_mm_h": 4.42,
+          "temperature_c": 21.5,
+          "relative_humidity_pct": 69.0,
+          "pressure_pa": 101210.0,
+          "air_density_kgm3": 1.1888,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 4.18,
+          "sim": {
+            "wind": 4.5,
+            "wdir": 210,
+            "gust": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T20:00Z",
+      "valid_local": "Tue 27 Oct 16:00",
+      "lead_h": 50,
+      "ensemble_spread_ms": 0.94,
+      "members": [
+        {
+          "wind_10m_ms": 4.43,
+          "wind_flight_level_ms": 5.17,
+          "wind_from_true_deg": 225.6,
+          "wind_from_map_deg": 225.6,
+          "gust_sigma_ms": 1.21,
+          "rain_mm_h": 10.47,
+          "temperature_c": 20.1,
+          "relative_humidity_pct": 83.0,
+          "pressure_pa": 101153.0,
+          "air_density_kgm3": 1.1929,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 2.48,
+          "sim": {
+            "wind": 5.0,
+            "wdir": 225,
+            "gust": 1.2
+          }
+        },
+        {
+          "wind_10m_ms": 5.5,
+          "wind_flight_level_ms": 6.41,
+          "wind_from_true_deg": 230.0,
+          "wind_from_map_deg": 230.0,
+          "gust_sigma_ms": 1.34,
+          "rain_mm_h": 4.75,
+          "temperature_c": 20.5,
+          "relative_humidity_pct": 83.0,
+          "pressure_pa": 101121.0,
+          "air_density_kgm3": 1.1905,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 4.01,
+          "sim": {
+            "wind": 6.5,
+            "wdir": 230,
+            "gust": 1.3
+          }
+        },
+        {
+          "wind_10m_ms": 4.77,
+          "wind_flight_level_ms": 5.56,
+          "wind_from_true_deg": 192.5,
+          "wind_from_map_deg": 192.5,
+          "gust_sigma_ms": 1.25,
+          "rain_mm_h": 5.24,
+          "temperature_c": 20.9,
+          "relative_humidity_pct": 77.0,
+          "pressure_pa": 101252.0,
+          "air_density_kgm3": 1.191,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 3.78,
+          "sim": {
+            "wind": 5.5,
+            "wdir": 195,
+            "gust": 1.3
+          }
+        },
+        {
+          "wind_10m_ms": 3.28,
+          "wind_flight_level_ms": 3.82,
+          "wind_from_true_deg": 218.8,
+          "wind_from_map_deg": 218.8,
+          "gust_sigma_ms": 1.1,
+          "rain_mm_h": 0.62,
+          "temperature_c": 23.0,
+          "relative_humidity_pct": 60.0,
+          "pressure_pa": 101333.0,
+          "air_density_kgm3": 1.1846,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 12.34,
+          "sim": {
+            "wind": 4.0,
+            "wdir": 220,
+            "gust": 1.1
+          }
+        }
+      ]
+    },
+    {
+      "valid_utc": "2026-10-27T21:00Z",
+      "valid_local": "Tue 27 Oct 17:00",
+      "lead_h": 51,
+      "ensemble_spread_ms": 0.48,
+      "members": [
+        {
+          "wind_10m_ms": 3.46,
+          "wind_flight_level_ms": 4.03,
+          "wind_from_true_deg": 207.2,
+          "wind_from_map_deg": 207.2,
+          "gust_sigma_ms": 0.77,
+          "rain_mm_h": 2.4,
+          "temperature_c": 20.6,
+          "relative_humidity_pct": 72.0,
+          "pressure_pa": 101275.0,
+          "air_density_kgm3": 1.1932,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 5.98,
+          "sim": {
+            "wind": 4.0,
+            "wdir": 205,
+            "gust": 0.8
+          }
+        },
+        {
+          "wind_10m_ms": 3.71,
+          "wind_flight_level_ms": 4.33,
+          "wind_from_true_deg": 211.0,
+          "wind_from_map_deg": 211.0,
+          "gust_sigma_ms": 0.81,
+          "rain_mm_h": 4.52,
+          "temperature_c": 19.6,
+          "relative_humidity_pct": 78.0,
+          "pressure_pa": 101221.0,
+          "air_density_kgm3": 1.1964,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 4.13,
+          "sim": {
+            "wind": 4.5,
+            "wdir": 210,
+            "gust": 0.8
+          }
+        },
+        {
+          "wind_10m_ms": 2.6,
+          "wind_flight_level_ms": 3.03,
+          "wind_from_true_deg": 188.4,
+          "wind_from_map_deg": 188.4,
+          "gust_sigma_ms": 0.66,
+          "rain_mm_h": 0.9,
+          "temperature_c": 21.3,
+          "relative_humidity_pct": 65.0,
+          "pressure_pa": 101273.0,
+          "air_density_kgm3": 1.1909,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 10.24,
+          "sim": {
+            "wind": 3.0,
+            "wdir": 190,
+            "gust": 0.7
+          }
+        },
+        {
+          "wind_10m_ms": 3.2,
+          "wind_flight_level_ms": 3.73,
+          "wind_from_true_deg": 193.9,
+          "wind_from_map_deg": 193.9,
+          "gust_sigma_ms": 0.74,
+          "rain_mm_h": 0.0,
+          "temperature_c": 24.7,
+          "relative_humidity_pct": 45.0,
+          "pressure_pa": 101238.0,
+          "air_density_kgm3": 1.1781,
+          "dust_risk_0_1": 0.0,
+          "visibility_km": 50.0,
+          "sim": {
+            "wind": 3.5,
+            "wdir": 195,
+            "gust": 0.7
+          }
+        }
+      ]
+    }
+  ]
+}

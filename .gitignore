@@ -1,0 +1,10 @@
+# local/session helpers, not part of the submission
+hpg_*.sh
+hpg_*.ps1
+colab_stormcast.ipynb
+Drone Scout Flight Lab.zip
+plot_physics.m
+sample-results/
+mission_demo/
+out_*/
+logs/
