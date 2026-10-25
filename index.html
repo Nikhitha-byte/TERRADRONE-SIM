@@ -72,7 +72,8 @@ body{max-width:1800px;margin:auto;padding:26px 28px 40px;background:radial-gradi
 <tr><td>WebODM transect captures</td><td>15 frame-pair records: RGB previews, relative positions, per-frame mean relative NDVI. Footprint size and cross-track offsets are assumed for display</td><td>Source JPEG/TIFF files at runtime; no registration of red and NIR</td></tr>
 <tr><td>Flight, power, wind, GNSS, triggers</td><td>Nothing from any dataset. Simulated from the aircraft configuration (DJI P4 Multispectral reference values)</td><td>No physical-drone telemetry</td></tr>
 </table></div></details></div>
-<div id="notice" role="status">Loading supplied map imagery…</div><div class="layout">
+<div id="notice" role="status">Loading supplied map imagery…</div>
+<div class="layout">
  <div class="col">
   <section class="panel">
     <div class="ph"><h2>01 / Survey map</h2><span class="sub" id="mapSub"></span></div>
@@ -110,5 +111,6 @@ body{max-width:1800px;margin:auto;padding:26px 28px 40px;background:radial-gradi
     <p class="note" style="padding:0 20px 16px"><a href="https://ag.dji.com/p4-multispectral/specs" target="_blank" rel="noreferrer">DJI specification reference</a> · Labels: <span class="tag t-SPEC">SPEC</span> manufacturer figure for the DJI Phantom 4 Multispectral · <span class="tag t-DERIVED">DERIVED</span> computed from SPEC values · <span class="tag t-ASSUMED">ASSUMED</span> my modelling choice, not a manufacturer figure · <span class="tag t-SIM">SIM</span> a scenario you set. Modified specification values are marked CUSTOM. Changes reset the current simulation. Export your run first.</p></section>
  </div>
 </div>
+<script src="gemma_verdict.js"></script>
 <script src="drone_data.js"></script><script src="drone_data5.js"></script>
 <script src="app.js"></script><script src="planner.js"></script><script src="physics6dof.js"></script><script src="physics_view.js"></script></body></html>
